@@ -124,7 +124,7 @@ php artisan migrate --seed
 php artisan db:seed --class=AdminUserSeeder
 ```
 
-> Ini akan membuat tabel dan menambahkan akun admin: `admin@example.com` dengan password `password`.
+> Ini akan membuat tabel dan menambahkan akun admin: `admin@gmail.com` dengan password `password`.
 
 ### 9. Jalankan Server Lokal
 
