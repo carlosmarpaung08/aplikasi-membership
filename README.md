@@ -156,5 +156,3 @@ Anda dapat mendaftar melalui proses manual atau menggunakan Google/Facebook logi
 Saran dan kontribusi sangat diterima! Jika Anda menemukan bug atau memiliki ide untuk fitur baru, jangan ragu untuk membuka **issue** atau mengirimkan **pull request**.
 
 ---
-
-Jika ingin menambahkan badge build, license, atau screenshot aplikasi untuk tampilan portfolio profesional, beri tahu saya untuk menyiapkannya selanjutnya.
