@@ -1,66 +1,160 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Aplikasi Membership Premium (Laravel 10)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi membership sederhana yang memungkinkan pengguna **mendaftar dan masuk menggunakan akun media sosial (Google & Facebook) atau kredensial manual**, serta mengakses konten premium (artikel & video) berdasarkan tingkatan membership mereka. Dilengkapi dengan **panel admin** untuk manajemen pengguna dan tipe membership.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🔑 Otentikasi Fleksibel
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Login & Register dengan Google**
+  Integrasi penuh menggunakan Google OAuth.
+* **Login & Register dengan Facebook**
+  Integrasi penuh menggunakan Facebook OAuth.
+* **Login & Register Manual**
+  Sistem pendaftaran dan login tradisional dengan email & kata sandi.
 
-## Learning Laravel
+### 💎 Sistem Membership Berjenjang
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Tipe A**
+  Akses ke 3 artikel dan 3 video dasar.
+* **Tipe B**
+  Akses ke 10 artikel dan 10 video menengah.
+* **Tipe C (Premium)**
+  Akses tak terbatas ke seluruh artikel dan video.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🔒 Pembatasan Konten Dinamis
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Konten artikel dan video di halaman daftar disaring dan ditampilkan berdasarkan tipe membership pengguna. **Upaya akses konten yang tidak diizinkan akan memunculkan peringatan.**
 
-## Laravel Sponsors
+### 🛠️ Panel Admin Khusus
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+* Halaman manajemen pengguna yang hanya dapat diakses oleh admin (`is_admin: true`).
+* Admin dapat dengan mudah mengubah tipe membership (A, B, C) untuk setiap pengguna.
 
-### Premium Partners
+### 🎨 User Interface Modern
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Dibangun dengan **Tailwind CSS** untuk tampilan yang responsif dan estetis.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🛠️ Teknologi yang Digunakan
 
-## Code of Conduct
+* **Backend:** PHP 8.2+ dengan Laravel 10 (termasuk Laravel Socialite untuk OAuth)
+* **Frontend:** Blade Templates, Alpine.js, Tailwind CSS 3
+* **Database:** MySQL (dapat dikonfigurasi)
+* **Manajemen Paket:** Composer (PHP), NPM (Node.js)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🚀 Cara Menjalankan Proyek Secara Lokal
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Ikuti langkah-langkah berikut untuk mengatur dan menjalankan proyek di mesin lokal Anda:
 
-## License
+### 1. Clone Repositori
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git clone https://github.com/YOUR_USERNAME/aplikasi-membership.git
+cd aplikasi-membership
+```
+
+> Ganti `YOUR_USERNAME` dengan nama pengguna GitHub Anda.
+
+### 2. Instal Dependensi PHP
+
+```bash
+composer install
+```
+
+### 3. Instal Dependensi JavaScript & Kompilasi Aset
+
+```bash
+npm install
+npm run dev
+```
+
+### 4. Konfigurasi Environment (.env)
+
+Buat salinan file `.env.example` menjadi `.env`:
+
+```bash
+cp .env.example .env
+# Untuk Windows:
+copy .env.example .env
+```
+
+### 5. Buat Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Konfigurasi Database
+
+Buka file `.env` dan perbarui detail koneksi database Anda (misalnya MySQL). Buat database baru di sistem Anda.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=aplikasi_membership_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 7. Konfigurasi Google & Facebook OAuth
+
+Dapatkan kredensial (Client ID, Client Secret, Redirect URI) dari **Google Cloud Console** dan **Meta for Developers**, lalu tambahkan ke `.env`:
+
+```env
+GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET=YOUR_GOOGLE_CLIENT_SECRET
+GOOGLE_REDIRECT_URI=http://localhost:8000/auth/google/callback
+
+FACEBOOK_CLIENT_ID=YOUR_FACEBOOK_APP_ID
+FACEBOOK_CLIENT_SECRET=YOUR_FACEBOOK_APP_SECRET
+FACEBOOK_REDIRECT_URI=http://localhost:8000/auth/facebook/callback
+```
+
+### 8. Jalankan Migrasi Database & Seeder
+
+```bash
+php artisan migrate --seed
+php artisan db:seed --class=AdminUserSeeder
+```
+
+> Ini akan membuat tabel dan menambahkan akun admin: `admin@example.com` dengan password `password`.
+
+### 9. Jalankan Server Lokal
+
+```bash
+php artisan serve
+```
+
+### 10. Akses Aplikasi
+
+Buka browser dan kunjungi [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+
+---
+
+## 🔒 Akun Pengujian
+
+### 👑 Akun Admin
+
+* **Email:** [admin@gmail.com](mailto:admin@gmail.com)
+* **Password:** password
+
+### 👤 Pengguna Biasa
+
+Anda dapat mendaftar melalui proses manual atau menggunakan Google/Facebook login. **Secara default**, mereka akan mendapatkan Membership **Tipe A**. Anda bisa mengubah tipe membership mereka melalui panel admin.
+
+---
+
+## 🤝 Kontribusi
+
+Saran dan kontribusi sangat diterima! Jika Anda menemukan bug atau memiliki ide untuk fitur baru, jangan ragu untuk membuka **issue** atau mengirimkan **pull request**.
+
+---
+
+Jika ingin menambahkan badge build, license, atau screenshot aplikasi untuk tampilan portfolio profesional, beri tahu saya untuk menyiapkannya selanjutnya.
